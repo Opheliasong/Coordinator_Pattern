@@ -26,4 +26,17 @@ class EventsCoordinator: Coordinator {
         vc.coordinator = self
         nv.pushViewController(vc, animated: true)
     }
+    
+    func didChildFinish(_ finishedChild:Coordinator) {
+        for (i, coordinator) in childs.enumerated() {
+            if coordinator === finishedChild {
+                childs.remove(at: i)
+                break
+            }
+        }
+    }
+    
+    func didFinishingEvents() {
+        parents?.didChildFinish(self)
+    }
 }

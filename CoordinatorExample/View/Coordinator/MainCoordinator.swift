@@ -19,7 +19,18 @@ class MainCoordinator : NSObject, Coordinator, Detail, Buy, Events {
     func start() {
         let vc  = ViewController()
         vc.coordinator = self
+        nv.delegate = self
         nv.pushViewController(vc, animated: false)
+    }
+    
+    func didChildFinish(_ finishedChild:Coordinator) {
+        // disapear되었을 경우 childs에서 remove
+        for (i, coordinator) in childs.enumerated() {
+            if coordinator === finishedChild {
+                childs.remove(at: i)
+                break
+            }
+        }
     }
     
     func pushDetail() {
@@ -38,5 +49,24 @@ class MainCoordinator : NSObject, Coordinator, Detail, Buy, Events {
         let events = EventsCoordinator(navigation: nv, parents: self)
         childs.append(events)
         events.start()
+    }
+
+}
+
+extension MainCoordinator:UINavigationControllerDelegate {
+    func navigationController(_ navigationController: UINavigationController,
+                              didShow viewController: UIViewController,
+                              animated: Bool) {
+        guard let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from) else {
+            return
+        }
+        
+        if navigationController.viewControllers.contains(fromViewController) {
+            return
+        }
+        
+        if let coordinatedView = fromViewController as? ViewCoordinating {
+            didChildFinish(coordinatedView.coordinator!)
+        }
     }
 }
