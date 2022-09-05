@@ -11,13 +11,15 @@ protocol Buy {
     func pushBuy()
 }
 
-class BuyViewCoordinator: ViewCoordinator {
-    var childs: [ViewCoordinator] = [ViewCoordinator]()
+class BuyCoordinator: Coordinator {
+    var parents:Coordinator?
+    var childs: [Coordinator] = [Coordinator]()
     
     var nv: UINavigationController
     
-    init(navigation:UINavigationController) {
+    init(navigation:UINavigationController, parents:Coordinator?) {
         self.nv = navigation
+        self.parents = parents
     }
     
     func start() {

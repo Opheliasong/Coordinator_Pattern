@@ -18,12 +18,12 @@
 		46F11F2D28B496F9009DF943 /* CoordinatorExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F11F2C28B496F9009DF943 /* CoordinatorExampleUITestsLaunchTests.swift */; };
 		46F11F3A28B5E4CE009DF943 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F11F3928B5E4CE009DF943 /* Coordinator.swift */; };
 		46F11F3D28B5F219009DF943 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F11F3C28B5F219009DF943 /* DetailViewController.swift */; };
-		46F11F4028B5F746009DF943 /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F11F3F28B5F746009DF943 /* MainViewCoordinator.swift */; };
-		46F11F4228B60753009DF943 /* DetailViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F11F4128B60753009DF943 /* DetailViewCoordinator.swift */; };
+		46F11F4028B5F746009DF943 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F11F3F28B5F746009DF943 /* MainCoordinator.swift */; };
+		46F11F4228B60753009DF943 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F11F4128B60753009DF943 /* DetailCoordinator.swift */; };
 		46F11F4428B61F23009DF943 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F11F4328B61F23009DF943 /* BuyViewController.swift */; };
 		46F11F4628B61F42009DF943 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F11F4528B61F42009DF943 /* EventsViewController.swift */; };
-		46F11F4828B620BD009DF943 /* BuyViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F11F4728B620BD009DF943 /* BuyViewCoordinator.swift */; };
-		46F11F4A28B621C8009DF943 /* EventsViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F11F4928B621C8009DF943 /* EventsViewCoordinator.swift */; };
+		46F11F4828B620BD009DF943 /* BuyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F11F4728B620BD009DF943 /* BuyCoordinator.swift */; };
+		46F11F4A28B621C8009DF943 /* EventsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F11F4928B621C8009DF943 /* EventsCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,12 +59,12 @@
 		46F11F2C28B496F9009DF943 /* CoordinatorExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		46F11F3928B5E4CE009DF943 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		46F11F3C28B5F219009DF943 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		46F11F3F28B5F746009DF943 /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
-		46F11F4128B60753009DF943 /* DetailViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCoordinator.swift; sourceTree = "<group>"; };
+		46F11F3F28B5F746009DF943 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		46F11F4128B60753009DF943 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
 		46F11F4328B61F23009DF943 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
 		46F11F4528B61F42009DF943 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
-		46F11F4728B620BD009DF943 /* BuyViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewCoordinator.swift; sourceTree = "<group>"; };
-		46F11F4928B621C8009DF943 /* EventsViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewCoordinator.swift; sourceTree = "<group>"; };
+		46F11F4728B620BD009DF943 /* BuyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCoordinator.swift; sourceTree = "<group>"; };
+		46F11F4928B621C8009DF943 /* EventsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,10 +159,10 @@
 			isa = PBXGroup;
 			children = (
 				46F11F3928B5E4CE009DF943 /* Coordinator.swift */,
-				46F11F3F28B5F746009DF943 /* MainViewCoordinator.swift */,
-				46F11F4128B60753009DF943 /* DetailViewCoordinator.swift */,
-				46F11F4728B620BD009DF943 /* BuyViewCoordinator.swift */,
-				46F11F4928B621C8009DF943 /* EventsViewCoordinator.swift */,
+				46F11F3F28B5F746009DF943 /* MainCoordinator.swift */,
+				46F11F4128B60753009DF943 /* DetailCoordinator.swift */,
+				46F11F4728B620BD009DF943 /* BuyCoordinator.swift */,
+				46F11F4928B621C8009DF943 /* EventsCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -297,15 +297,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46F11F4228B60753009DF943 /* DetailViewCoordinator.swift in Sources */,
-				46F11F4028B5F746009DF943 /* MainViewCoordinator.swift in Sources */,
+				46F11F4228B60753009DF943 /* DetailCoordinator.swift in Sources */,
+				46F11F4028B5F746009DF943 /* MainCoordinator.swift in Sources */,
 				46F11F4428B61F23009DF943 /* BuyViewController.swift in Sources */,
 				46F11F0B28B496F5009DF943 /* ViewController.swift in Sources */,
 				46F11F0728B496F5009DF943 /* AppDelegate.swift in Sources */,
 				46F11F3A28B5E4CE009DF943 /* Coordinator.swift in Sources */,
-				46F11F4A28B621C8009DF943 /* EventsViewCoordinator.swift in Sources */,
+				46F11F4A28B621C8009DF943 /* EventsCoordinator.swift in Sources */,
 				46F11F3D28B5F219009DF943 /* DetailViewController.swift in Sources */,
-				46F11F4828B620BD009DF943 /* BuyViewCoordinator.swift in Sources */,
+				46F11F4828B620BD009DF943 /* BuyCoordinator.swift in Sources */,
 				46F11F0928B496F5009DF943 /* SceneDelegate.swift in Sources */,
 				46F11F1128B496F5009DF943 /* CoordinatorExample.xcdatamodeld in Sources */,
 				46F11F4628B61F42009DF943 /* EventsViewController.swift in Sources */,

@@ -11,7 +11,7 @@ import UIKit
  Main View Controller, 앱 실행시 가장 먼저 보게 되는 View의 role을 가진 view
  */
 class ViewController: UIViewController, ViewCoordinating {
-    var coordinator: ViewCoordinator?
+    var coordinator: Coordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,7 @@ class ViewController: UIViewController, ViewCoordinating {
     }
 
     @objc func didMovieToDetail() {
-        guard let mainCoordinator = coordinator as? MainViewCoordinator else {
+        guard let mainCoordinator = coordinator as? MainCoordinator else {
             return
         }
         
@@ -51,7 +51,7 @@ class ViewController: UIViewController, ViewCoordinating {
     }
     
     @objc func didMovieToEvents() {
-        guard let mainCoordinator = coordinator as? MainViewCoordinator else {
+        guard let mainCoordinator = coordinator as? MainCoordinator else {
             return
         }
         
@@ -59,7 +59,7 @@ class ViewController: UIViewController, ViewCoordinating {
     }
     
     @objc func didMovieToBuy() {
-        guard let mainCoordinator = coordinator as? MainViewCoordinator else {
+        guard let mainCoordinator = coordinator as? MainCoordinator else {
             return
         }
         

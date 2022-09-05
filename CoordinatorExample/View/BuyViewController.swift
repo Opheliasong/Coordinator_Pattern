@@ -10,8 +10,8 @@ import UIKit
 /*
  정해진 하나의 Product를 구매하기 위한 Role을 가진 View
  */
-class BuyViewController: UIViewController {
-    var coordinator: (ViewCoordinator & BuyViewCoordinator)?
+class BuyViewController: UIViewController,ViewCoordinating {
+    var coordinator: Coordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()

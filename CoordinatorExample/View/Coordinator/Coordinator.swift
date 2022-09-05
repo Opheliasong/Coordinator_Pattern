@@ -33,11 +33,12 @@ struct ViewChangeObject {
 /*
  Coordinator들의 규격화된 protocol
  */
-protocol ViewCoordinator: AnyObject {
-    var childs: [ViewCoordinator] {get set}
+protocol Coordinator: AnyObject {
+    var childs: [Coordinator] {get set}
     var nv: UINavigationController {get set}
     
     func start()
+    func didChildFinish(_ finishedChild:Coordinator)
 }
 
 /*
@@ -45,5 +46,5 @@ protocol ViewCoordinator: AnyObject {
  모든 UIVIewController에 해당 프로토콜을 적용하여 Coordinator가 항시 적용되도록 규격화 하기 위한 protocol
  */
 protocol ViewCoordinating : AnyObject {
-    var coordinator:ViewCoordinator? { get set }
+    var coordinator:Coordinator? { get set }
 }

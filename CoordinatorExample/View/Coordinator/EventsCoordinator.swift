@@ -11,12 +11,14 @@ protocol Events {
     func pushEvents()
 }
 
-class EventsViewCoordinator: ViewCoordinator {
-    var childs: [ViewCoordinator] = [ViewCoordinator]()
+class EventsCoordinator: Coordinator {
+    var parents:Coordinator?
+    var childs: [Coordinator] = [Coordinator]()
     var nv: UINavigationController
     
-    init(navigation:UINavigationController) {
+    init(navigation:UINavigationController, parents:Coordinator?) {
         self.nv = navigation
+        self.parents = parents
     }
     
     func start() {

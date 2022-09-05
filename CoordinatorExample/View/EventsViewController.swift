@@ -10,8 +10,8 @@ import UIKit
 /*
  현재 진행중인 Event들에 관해서 나열하는 Role을 가진 View
  */
-class EventsViewController: UIViewController {
-    var coordinator: ViewCoordinator?
+class EventsViewController: UIViewController, ViewCoordinating {
+    var coordinator: Coordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()

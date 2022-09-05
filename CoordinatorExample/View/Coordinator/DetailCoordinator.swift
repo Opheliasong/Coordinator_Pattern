@@ -12,12 +12,14 @@ protocol Detail {
     func pushDetail()
 }
 
-class DetailViewCoordinator : ViewCoordinator, Buy {
-    var childs: [ViewCoordinator] = [ViewCoordinator]()
+class DetailCoordinator : NSObject, Coordinator, Buy{
+    weak var parents:Coordinator?
+    var childs: [Coordinator] = [Coordinator]()
     var nv: UINavigationController
     
-    init(navigationController:UINavigationController) {
+    init(navigationController:UINavigationController, parents:Coordinator?) {
         self.nv = navigationController
+        self.parents = parents
     }
     
     func start() {
@@ -27,8 +29,9 @@ class DetailViewCoordinator : ViewCoordinator, Buy {
     }
     
     func pushBuy() {
-        let buy = BuyViewCoordinator(navigation: nv)
+        let buy = BuyCoordinator(navigation: nv, parents: self)
+        childs.append(buy)
         buy.start()
     }
-    
+
 }

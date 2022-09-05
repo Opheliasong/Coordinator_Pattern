@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-class MainViewCoordinator : ViewCoordinator, Detail, Buy, Events {
-    var childs: [ViewCoordinator] = [ViewCoordinator]()
+class MainCoordinator : NSObject, Coordinator, Detail, Buy, Events {
+    var childs: [Coordinator] = [Coordinator]()
     var nv: UINavigationController
     
     init(navigationController:UINavigationController) {
@@ -23,17 +23,20 @@ class MainViewCoordinator : ViewCoordinator, Detail, Buy, Events {
     }
     
     func pushDetail() {
-        let detail = DetailViewCoordinator(navigationController: nv)
+        let detail = DetailCoordinator(navigationController: nv, parents: self)
+        childs.append(detail)
         detail.start()
     }
     
     func pushBuy() {
-        let buy = BuyViewCoordinator(navigation: nv)
+        let buy = BuyCoordinator(navigation: nv, parents: self)
+        childs.append(buy)
         buy.start()
     }
     
     func pushEvents() {
-        let events = EventsViewCoordinator(navigation: nv)
+        let events = EventsCoordinator(navigation: nv, parents: self)
+        childs.append(events)
         events.start()
     }
 }
