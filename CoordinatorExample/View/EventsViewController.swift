@@ -7,23 +7,18 @@
 
 import UIKit
 
+/*
+ 현재 진행중인 Event들에 관해서 나열하는 Role을 가진 View
+ */
 class EventsViewController: UIViewController {
-
+    var coordinator: ViewCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = .systemBrown
+        self.title = "Events"
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

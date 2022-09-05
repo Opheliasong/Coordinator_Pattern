@@ -7,6 +7,9 @@
 
 import UIKit
 
+/**
+ 상품의 상세적인 화면을 보여주는 Role을 가진 View
+ */
 class DetailViewController: UIViewController, ViewCoordinating {
     var coordinator: ViewCoordinator?
     
@@ -27,7 +30,9 @@ class DetailViewController: UIViewController, ViewCoordinating {
     }
     
     @objc func didMovieToDetail(){
-        
+        guard let detailCoordinator = coordinator as? DetailViewCoordinator else {
+            return
+        }
+        detailCoordinator.pushBuy()
     }
-
 }
