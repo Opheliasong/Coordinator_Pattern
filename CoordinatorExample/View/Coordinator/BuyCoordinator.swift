@@ -27,4 +27,17 @@ class BuyCoordinator: Coordinator {
         vc.coordinator = self
         nv.pushViewController(vc, animated: true)
     }
+    
+    func didFinishingBuying() {
+        parents?.didChildFinish(self)
+    }
+    
+    func didChildFinish(_ finishedChild: Coordinator) {
+        for (i, coordinator) in childs.enumerated() {
+            if coordinator === finishedChild {
+                childs.remove(at: i)
+                break
+            }
+        }
+    }
 }

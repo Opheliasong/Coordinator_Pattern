@@ -28,6 +28,19 @@ class DetailCoordinator : NSObject, Coordinator, Buy{
         nv.pushViewController(vc, animated: true)
     }
     
+    func didFinishingDetail() {
+        parents?.didChildFinish(self)
+    }
+    
+    func didChildFinish(_ finishedChild:Coordinator) {
+        for (i, coordinator) in childs.enumerated() {
+            if coordinator === finishedChild {
+                childs.remove(at: i)
+                break
+            }
+        }
+    }
+    
     func pushBuy() {
         let buy = BuyCoordinator(navigation: nv, parents: self)
         childs.append(buy)
