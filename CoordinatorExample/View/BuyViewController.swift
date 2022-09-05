@@ -7,23 +7,17 @@
 
 import UIKit
 
+/*
+ 정해진 하나의 Product를 구매하기 위한 Role을 가진 View
+ */
 class BuyViewController: UIViewController {
-
+    var coordinator: (ViewCoordinator & BuyViewCoordinator)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = .systemMint
+        self.title = "Buy"
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

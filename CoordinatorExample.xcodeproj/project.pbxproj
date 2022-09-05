@@ -22,6 +22,8 @@
 		46F11F4228B60753009DF943 /* DetailViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F11F4128B60753009DF943 /* DetailViewCoordinator.swift */; };
 		46F11F4428B61F23009DF943 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F11F4328B61F23009DF943 /* BuyViewController.swift */; };
 		46F11F4628B61F42009DF943 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F11F4528B61F42009DF943 /* EventsViewController.swift */; };
+		46F11F4828B620BD009DF943 /* BuyViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F11F4728B620BD009DF943 /* BuyViewCoordinator.swift */; };
+		46F11F4A28B621C8009DF943 /* EventsViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F11F4928B621C8009DF943 /* EventsViewCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		46F11F4128B60753009DF943 /* DetailViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCoordinator.swift; sourceTree = "<group>"; };
 		46F11F4328B61F23009DF943 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
 		46F11F4528B61F42009DF943 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		46F11F4728B620BD009DF943 /* BuyViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewCoordinator.swift; sourceTree = "<group>"; };
+		46F11F4928B621C8009DF943 /* EventsViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,8 @@
 				46F11F3928B5E4CE009DF943 /* Coordinator.swift */,
 				46F11F3F28B5F746009DF943 /* MainViewCoordinator.swift */,
 				46F11F4128B60753009DF943 /* DetailViewCoordinator.swift */,
+				46F11F4728B620BD009DF943 /* BuyViewCoordinator.swift */,
+				46F11F4928B621C8009DF943 /* EventsViewCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -297,7 +303,9 @@
 				46F11F0B28B496F5009DF943 /* ViewController.swift in Sources */,
 				46F11F0728B496F5009DF943 /* AppDelegate.swift in Sources */,
 				46F11F3A28B5E4CE009DF943 /* Coordinator.swift in Sources */,
+				46F11F4A28B621C8009DF943 /* EventsViewCoordinator.swift in Sources */,
 				46F11F3D28B5F219009DF943 /* DetailViewController.swift in Sources */,
+				46F11F4828B620BD009DF943 /* BuyViewCoordinator.swift in Sources */,
 				46F11F0928B496F5009DF943 /* SceneDelegate.swift in Sources */,
 				46F11F1128B496F5009DF943 /* CoordinatorExample.xcdatamodeld in Sources */,
 				46F11F4628B61F42009DF943 /* EventsViewController.swift in Sources */,
@@ -485,7 +493,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -512,7 +520,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
