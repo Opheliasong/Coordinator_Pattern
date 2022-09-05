@@ -8,7 +8,11 @@
 import Foundation
 import UIKit
 
-class DetailViewCoordinator : ViewCoordinator {
+protocol Detail {
+    func pushDetail()
+}
+
+class DetailViewCoordinator : ViewCoordinator, Buy {
     var childs: [ViewCoordinator] = [ViewCoordinator]()
     var nv: UINavigationController
     
@@ -18,6 +22,13 @@ class DetailViewCoordinator : ViewCoordinator {
     
     func start() {
         let vc = DetailViewController()
-        nv.pushViewController(vc, animated: false)
+        vc.coordinator = self
+        nv.pushViewController(vc, animated: true)
     }
+    
+    func pushBuy() {
+        let buy = BuyViewCoordinator(navigation: nv)
+        buy.start()
+    }
+    
 }
